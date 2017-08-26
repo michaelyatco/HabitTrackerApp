@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EditActivity"
+            android:label="Add a Habit"
+            android:theme="@style/EditTheme"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <provider
+            android:name=".data.HabitProvider"
+            android:authorities="com.example.android.habittrackerapp"
+            android:exported="false" />
     </application>
-
 </manifest>

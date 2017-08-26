@@ -1,3 +1,58 @@
 <resources>
-    <string name="app_name">HabitTrackerApp</string>
+    <!-- Name for the application [CHAR LIMIT=12] -->
+    <string name="app_name">Habit Tracker App</string>
+
+    <!-- Label for overflow menu option that inserts fake habit data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <!-- Label for overflow menu option that deletes all habit data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Habits</string>
+
+    <!-- Title for the activity to add a new habit [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_habit">Add a Habit</string>
+
+    <!-- Label for editor menu option to save habit and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current habit [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_overview">Overview</string>
+
+    <!-- Label for gender information in the editor [CHAR LIMIT=30] -->
+    <string name="category_type">Type</string>
+
+    <!-- Label for gender information in the editor [CHAR LIMIT=30] -->
+    <string name="category_time">Time</string>
+
+    <!-- Label for measurement information in the editor [CHAR LIMIT=30] -->
+    <string name="category_measurement">Measurement</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_habit_date">Date</string>
+
+    <!-- Text hint for breed field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_habit_habit">Habit</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_habit_comment">Comment</string>
+
+    <!-- Label for dropdown menu option if the habit's gender is unknown [CHAR LIMIT=20] -->
+    <string name="type_fitness">Fitness</string>
+
+    <!-- Label for dropdown menu option if the habit is male [CHAR LIMIT=20] -->
+    <string name="type_leisure">Leisure</string>
+
+    <!-- Label for dropdown menu option if the habit is female [CHAR LIMIT=20] -->
+    <string name="type_enrichment">Enrichment</string>
+
+    <!-- Label for dropdown menu option if the habit's gender is unknown [CHAR LIMIT=20] -->
+    <string name="time_morning">Morning</string>
+
+    <!-- Label for dropdown menu option if the habit is male [CHAR LIMIT=20] -->
+    <string name="time_afternoon">Afternoon</string>
+
+    <!-- Label for dropdown menu option if the habit is female [CHAR LIMIT=20] -->
+    <string name="time_evening">Evening</string>
 </resources>
