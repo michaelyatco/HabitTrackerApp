@@ -1,6 +1,7 @@
 package com.example.android.habittrackerapp.data;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -11,7 +12,7 @@ import com.example.android.habittrackerapp.data.HabitContract.HabitEntry;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = DbHelper.class.getSimpleName();
+    private SQLiteDatabase db;
 
     /**
      * Name of the database file
@@ -30,6 +31,7 @@ public class DbHelper extends SQLiteOpenHelper {
      */
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        db = getWritableDatabase();
     }
 
     /**
@@ -56,5 +58,24 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // The database is still at version 1, so there's nothing to do be done here.
+    }
+
+    public Cursor getRecord(int recordId) {
+        Cursor record;
+        String table = HabitContract.HabitEntry.TABLE_NAME;
+        String selection = HabitContract.HabitEntry._ID + " = ? ";
+        String[] selectionArgs = new String[]{Integer.toString(recordId)};
+        db = getReadableDatabase();
+        try {
+            record = db.query(true, table, null, selection, selectionArgs, null, null, null, null);
+            record.moveToFirst();
+            record.close();
+            db.close();
+            return record;
+        } catch (Exception e) {
+            e.printStackTrace();
+            db.close();
+            return null;
+        }
     }
 }

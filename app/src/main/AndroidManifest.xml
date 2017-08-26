@@ -25,9 +25,5 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <provider
-            android:name=".data.HabitProvider"
-            android:authorities="com.example.android.habittrackerapp"
-            android:exported="false" />
     </application>
 </manifest>

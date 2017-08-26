@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -127,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
                 // resources and makes it invalid.
                 cursor.close();
             }
+            Cursor habitRecord = mDbHelper.getRecord(1);
+            Log.i("getRecord ", habitRecord.toString());
         }
 
         /**
