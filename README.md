@@ -1,5 +1,5 @@
 # HabitTrackerApp
-Udacity's Android Developer Nanodegree program exercise #11
+
 
 ## Purpose
 
